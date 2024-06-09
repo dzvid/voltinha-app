@@ -1,24 +1,34 @@
 <template>
     <header class="d-flex">
-        <v-btn icon color="primary" flat rounded slim @click="() => $router.go(-1)">
+        <v-btn icon color="primary" flat rounded slim @click="() => $router.go(-1)" class="mr-4">
             <v-icon> mdi-arrow-left-bold </v-icon>
         </v-btn>
 
         <h1>Corrida de Terça</h1>
     </header>
 
-    <v-container>
+    <v-container class="mt-4">
         <v-row>
+            <v-col cols="6" md="6">
+                <v-card class="" flat>
+                    <p class="mb-3">
+                        <v-icon class="mr-2" size="2rem"> mdi-map-marker-distance </v-icon>
+                        <span class="font-weight-bold">Distânciapercorrida:</span> 101m
+                    </p>
+                    <p class="mb-3">
+                        <v-icon class="mr-2" size="2rem"> mdi-calendar-start </v-icon>
+                        <span class="font-weight-bold">Iniciada em:</span> {{ this.item.startedAt }}
+                    </p>
+                    <p class="mb-3">
+                        <v-icon class="mr-2" size="2rem"> mdi-calendar-end </v-icon>
+                        <span class="font-weight-bold">Finalizada em:</span> {{ this.item.finishedAt }}
+                    </p>
+                </v-card>
+            </v-col>
+
             <v-col cols="6" md="6">
                 <v-card>
                     <div class="mapdiv" id="mapdiv"></div>
-                </v-card>
-            </v-col>
-            <v-col cols="6" md="6">
-                <v-card>
-                    <p><v-icon> mdi-map-marker-distance </v-icon> Distância percorrida: 101m</p>
-                    <p><v-icon> mdi-calendar-start </v-icon> Iniciada em: {{ this.item.startedAt }}</p>
-                    <p><v-icon> mdi-calendar-end </v-icon> Finalizada em: {{ this.item.finishedAt }}</p>
                 </v-card>
             </v-col>
         </v-row>

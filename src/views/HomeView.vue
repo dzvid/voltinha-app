@@ -1,13 +1,9 @@
 <template>
   <header>
-    <h1>Voltinha.app</h1>
+    <h1>Lista de Corridas</h1>
   </header>
 
-  <v-card rounded flat>
-    <v-card-title>
-
-      <h2>Lista de Corridas</h2>
-    </v-card-title>
+  <v-card rounded flat class="mt-4">
     <v-data-table :items="items" :headers="headers" disable-sort>
       <template v-slot:[`item.actions`]="{ item }">
         <v-btn color="primary" append-icon="mdi-arrow-right-bold" flat :id="item.id" rounded
@@ -42,3 +38,10 @@ export default {
   }),
 }
 </script>
+
+<style scoped>
+header {
+  height: 4rem;
+  background-color: var(--v-primary-secondary)
+}
+</style>

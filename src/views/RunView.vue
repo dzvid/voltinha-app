@@ -9,11 +9,11 @@
 
     <v-container class="mt-4">
         <v-row>
-            <v-col cols="6" md="6">
+            <v-col cols="12" md="6">
                 <v-card class="" flat>
                     <p class="mb-3">
                         <v-icon class="mr-2" size="2rem"> mdi-map-marker-distance </v-icon>
-                        <span class="font-weight-bold">Distânciapercorrida:</span> 101m
+                        <span class="font-weight-bold">Distância percorrida:</span> 101m
                     </p>
                     <p class="mb-3">
                         <v-icon class="mr-2" size="2rem"> mdi-calendar-start </v-icon>
@@ -26,7 +26,7 @@
                 </v-card>
             </v-col>
 
-            <v-col cols="6" md="6">
+            <v-col cols="12" md="6">
                 <v-card>
                     <div class="mapdiv" id="mapdiv"></div>
                 </v-card>
